@@ -1,13 +1,11 @@
 import React from 'react';
+import SearchContainer from '../containers/SearchContainer.js'
 
  
 class Search extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      value: ''
-    };
   }
 
   handleInputChange(e) {
@@ -23,8 +21,8 @@ class Search extends React.Component {
         <input
           className="form-control"
           type="text"
-          value={this.state.value}
-          onChange={this.handleInputChange.bind(this)}
+          value={mapStateToProps(state)}
+          onChange={mapDispatchToProps(input)}
         />
         <button className="btn hidden-sm-down">
           <span className="glyphicon glyphicon-search"></span>
